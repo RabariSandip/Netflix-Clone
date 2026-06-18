@@ -1,0 +1,386 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 100px;
+
+    position:absolute;
+    width:100%;
+}
+
+.logo{
+    width:150px;
+}
+
+nav button{
+    background:red;
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.7),
+    rgba(0,0,0,.7)),
+    url(images/bg.jpg);
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.content h1{
+    font-size:60px;
+
+    max-width:800px;
+}
+
+.content h3{
+    margin-top:20px;
+}
+
+.content p{
+    margin-top:20px;
+}
+
+.email-box{
+    margin-top:20px;
+}
+
+.email-box input{
+    padding:15px;
+
+    width:350px;
+
+    border:none;
+}
+
+.email-box button{
+    padding:15px 25px;
+
+    background:red;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+}
+
+/* Movies Section */
+
+.movies-section{
+    padding:70px 100px;
+}
+
+.movies-section h1{
+    margin-bottom:30px;
+    font-size:35px;
+}
+
+/* Movie Cards */
+
+.movies{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.card{
+    overflow:hidden;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+.card img{
+    width:250px;
+    border-radius:15px;
+    transition:.5s;
+}
+
+/* Hover Effect */
+
+.card img:hover{
+
+    transform:
+    scale(1.1)
+    translateY(-15px);
+
+    box-shadow:
+    0 0 30px red;
+
+}
+
+/* Reasons Section */
+
+.reasons{
+    padding:80px 100px;
+}
+
+.reasons h1{
+    font-size:35px;
+    margin-bottom:40px;
+}
+
+.reason-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.reason-card{
+    background:linear-gradient(
+        135deg,
+        #1e293b,
+        #111827
+    );
+
+    padding:30px;
+
+    border-radius:20px;
+
+    transition:.5s;
+
+    cursor:pointer;
+}
+
+.reason-card h2{
+    margin-bottom:20px;
+}
+
+.reason-card:hover{
+    transform:translateY(-15px);
+
+    box-shadow:0 0 25px rgba(255,0,0,.5);
+}
+
+/* FAQ */
+
+.faq{
+    padding:80px 100px;
+}
+
+.faq h1{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.faq-box{
+    margin-bottom:10px;
+}
+
+.question{
+    background:#2d2d2d;
+    padding:30px;
+    font-size:25px;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    transition:.3s;
+}
+
+.question:hover{
+    background:#444;
+}
+
+.answer{
+    background:#2d2d2d;
+    padding:30px;
+    margin-top:2px;
+
+    display:none;
+}
+
+/* Footer */
+
+footer{
+    padding:80px 100px;
+    background:black;
+}
+
+.call{
+    color:#aaa;
+    margin-bottom:40px;
+}
+
+.footer-links{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.footer-links div{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-links a{
+    color:#aaa;
+    margin-bottom:15px;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+.copyright{
+    margin-top:50px;
+    color:#777;
+}
+
+/* Responsive Design */
+
+@media(max-width:768px){
+
+    nav{
+        padding:20px;
+    }
+
+    .logo{
+        width:100px;
+    }
+
+    nav button{
+        padding:8px 15px;
+    }
+
+    .content h1{
+        font-size:40px;
+    }
+
+    .content h3{
+        font-size:20px;
+    }
+
+    .email-box{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .email-box input{
+        width:100%;
+    }
+
+    .movies{
+        flex-wrap:wrap;
+    }
+
+    .movies-section,
+    .reasons,
+    .faq,
+    footer{
+        padding:50px 20px;
+    }
+
+    .question{
+        font-size:18px;
+        padding:20px;
+    }
+}
+
+section{
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+button{
+    transition:.4s;
+}
+
+button:hover{
+
+    background:#ff1e1e;
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 25px red;
+
+}
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:red;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+
+.question:hover{
+
+    background:#444;
+
+    box-shadow:
+    0 0 20px red;
+
+}
